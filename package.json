@@ -1,0 +1,18 @@
+{
+  "name": "hadimbook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:api": "npm start --prefix api",
+    "start:frontend": "npm start --prefix frontend",
+    "start": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "workspaces": [
+    "api",
+    "frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
