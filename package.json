@@ -6,7 +6,7 @@
     "start:api": "npm start --prefix api",
     "start:frontend": "npm start --prefix frontend",
     "start": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "workspaces": [
     "api",
